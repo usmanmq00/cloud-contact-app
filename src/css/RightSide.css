@@ -1,0 +1,13 @@
+.rightSide{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile Design */
+@media screen and (max-width: 600px){
+       .rightSide{
+            width: 100%;
+            padding: 15px;
+        }
+    }

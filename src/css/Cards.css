@@ -1,0 +1,71 @@
+.card{
+    border: 1px solid rgb(121, 121, 121);
+    background-color: rgb(236, 231, 231);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.cardLeft
+{
+    width: 50%;
+}
+
+.userName{
+    font-size: 15px;
+    color: rgb(26, 68, 209);
+    padding: 10px 0;
+}
+
+.userMail{
+    padding: 5px 0;
+}
+
+.userPhone{
+    padding: 5px 0;
+}
+
+.userIcon{
+    padding-right: 5px;
+}
+
+.userButtons{
+    padding: 5px 0;
+}
+
+.edit{
+    background-color: rgb(71, 71, 71);
+    border: none;
+    padding: 4px 10px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.del{
+    background-color: rgba(211, 27, 17, 0.861);
+    border: none;
+    padding: 4px 10px;
+    color: #fff;
+}
+
+.cardRight{
+    display: flex;
+    flex-direction: column;
+}
+
+.typePer{
+    color: #fff;
+    background-color: rgb(26, 68, 209);
+    border: none;
+    padding: 5px 5px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+.typePro{
+    color: #fff;
+    background-color: green;
+    border: none;
+    padding: 5px 10px;
+}

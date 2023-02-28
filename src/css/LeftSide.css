@@ -1,0 +1,9 @@
+.leftSide{
+    width: 50%;
+}
+
+@media screen and (max-width: 600px){
+    .leftSide{
+        width: 100%;
+    }
+}

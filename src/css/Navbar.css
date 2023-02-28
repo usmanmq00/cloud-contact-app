@@ -1,0 +1,42 @@
+.navbar{
+    background-color: rgb(26, 68, 209);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.logoIcon{
+    padding-right: 5px;
+}
+
+.logo{
+    color: #fff;
+    font-size: 30px;
+}
+
+.navList{
+    display: flex;
+    padding-right: 20px;
+    padding-top: 10px;
+    list-style: none;
+    color: #fff;
+}
+
+.user{
+    padding-right: 20px;
+}
+
+.logoutIcon{
+    padding-right: 5px;
+}
+
+/* Mobile Design */
+@media screen and (max-width: 600px){
+    /* Navbar */
+    .logo{
+        font-size: 25px;
+    }
+    .navList{
+        font-size: 15px;
+    }
+}
