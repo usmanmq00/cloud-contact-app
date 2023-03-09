@@ -1,27 +1,31 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from "react-redux";
 import Cards from './Cards';
 import '../css/ContactForm.css'
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [type, setType] = useState(false);
-  const [data, setData] = useState([])
+  const { name, email, phone} = useSelector((state) => ({
+    id: state.ContactForm.id,
+    name: state.ContactForm.name,
+    email: state.ContactForm.email,
+    phone: state.ContactForm.phone
+  }));
+
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setData([...data, {name, email, phone}])
-    
+    dispatch({type: "INCREMENT_ID"})
+    dispatch({type: "FORM_DATA"})
   }
 
   return (
     <>
     <form className="form" onSubmit={handleSubmit}>
       <h1 className="formTitle">Add Contact</h1>
-      <input type="text" className="formFields" placeholder="Name" onChange={(e) => setName(e.target.value)} /><br />
-      <input type="email" className="formFields" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/><br />
-      <input type="text" className="formFields" placeholder="Phone" onChange={(e) => setPhone(e.target.value)}/>
+      <input type="text" className="formFields" placeholder="Name" onChange={(e) => dispatch({type: 'UPDATE_NAME', payload: e.target.value })} /><br />
+      <input type="email" className="formFields" placeholder="Email" onChange={(e) => dispatch({type: 'UPDATE_EMAIL', payload: e.target.value })}/><br />
+      <input type="text" className="formFields" placeholder="Phone" onChange={(e) => dispatch({type: 'UPDATE_PHONE', payload: e.target.value })}/>
       <div className="type">
         <h6 className="contactType">Contact Type</h6>
         <div className='space'>
@@ -34,8 +38,6 @@ const ContactForm = () => {
       <input type="file" /><br />
       <button className="formSub" value="Add Contact">Add Contact</button>
     </form>
-
-    {data.length > 0 && data.map((obj) => <Cards name={obj.name} email={obj.email} phone={obj.phone} />)}
     </>
   )
 }

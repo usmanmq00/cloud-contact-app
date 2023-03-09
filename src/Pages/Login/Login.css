@@ -1,0 +1,47 @@
+.upper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 100vh;
+}
+
+.logInForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 70%;
+    /* margin: 200px; */
+    background-color: White;
+}
+
+.logInTitle{
+    color: blue;
+    padding-bottom: 20px;
+}
+
+.logInField1{
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 50px;
+}
+
+.logInField2{
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 20px;
+}
+
+.logInSub{
+    margin-top: 20px;
+    padding: 15px 15px;
+    background-color: rgb(26, 68, 209);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
